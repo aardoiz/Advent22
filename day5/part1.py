@@ -50,11 +50,13 @@ def get_solution(data:dict):
         inter_list.append(v[0])
     print(''.join(inter_list))
 
+
 def main(text: str, data: dict) -> None:
     for line in text:
         n_items, init, end =  process_instructions(line)
         data = move_cargo(data, n_items, init, end)
     get_solution(data)
+
 
 array = convert_cargo_to_dicts(cargo)
 main(instructions, array)
